@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery</title>
+</head>
+<style>
+    #products{
+        margin: 5% 5% 5% 5%;
+        padding-top: 1%;
+        height: 1000px;
+        display:  grid;
+        grid-template-columns:30% 30% 30% ;
+        grid-template-rows: 50% 50% 50% ;
+        grid-gap: 4%;
+        justify-content: center;
+    }
+    img{
+        width: 70%;
+    }
+    button{
+        align-items: center;
+    }
+</style>
+<body>
+    <h1>LocalStorage  form first Page</h1>
+    <a href="Products.html"><button>Go to Cart</button></a>
+    <div id="products"></div>
+    
+    
+</body>
+<script>
+    let data = [
+        {
+        name : "MAC COSMETICS",
+        decript: "Studio Finish SPF 35 Concealer - NC25",
+        price: "Rs. 2300",
+        img: "https://cdn08.nnnow.com/web-images/medium/styles/9UBKKU0GEA9/1620818183768/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript: "Powder Kiss Liquid Lip Stick - MACsmash",
+        price: "Rs. 2,200",
+        img: "https://cdn17.nnnow.com/web-images/medium/styles/URX4TLOYMBB/1620627876963/1.jpg"
+        },
+        {
+         name : "MAC COSMETICS",
+        price: "Rs.2,900",
+        decript:"Studio Fix Fluid Foundation SPF 15 - NC 44",
+        img: "https://cdn17.nnnow.com/web-images/medium/styles/XC25V5T9Z5L/1620068090598/1.jpg"
+        },
+        
+        {
+        name : "MAC COSMETICS",
+        decript: "Hyper Real Glow Palette - Flash + Awe",
+        price: "Rs.4,900",
+        img: "https://cdn14.nnnow.com/web-images/medium/styles/SHXO9YFZ179/1562835044618/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript:"Prep + Prime Lip",
+        price: "Rs.1,700",
+        img: "https://cdn19.nnnow.com/web-images/medium/styles/YJSEF9Z3JPV/1620819235616/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript:"Brush Cleanser",
+        price: "Rs. 1,100",
+        img: "https://cdn12.nnnow.com/web-images/medium/styles/I6I43K10MB3/1562827958147/1.jpg"
+        },
+        
+        {
+        name : "MAC COSMETICS",
+        decript: "In Extreme Dimension Mascara - 3D Black Lash",
+        price: "Rs.2,400",
+        img: "https://cdn18.nnnow.com/web-images/medium/styles/WEKE57SDSM6/1620819235565/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript: "Retro Matte Liquid Lip Colour - Dance With Me",
+        price: "Rs.2,200",
+        img: "https://cdn10.nnnow.com/web-images/medium/styles/Z3AMFRONJ7U/1620062724479/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript:"Studio Fix Powder Plus Foundation - NC46",
+        price: "Rs.2,900",
+        img: "https://cdn06.nnnow.com/web-images/medium/styles/X7Y3Q5PJ3CO/1620068090538/1.jpg"
+        },
+        
+    ];
+
+    let parent = document.getElementById("products")
+    function showProducts() {
+      data.forEach(function (product) {
+      console.log(product.name);
+      let div =document.createElement("div");
+      let img = document.createElement("img");
+      img.src = product.img;
+      let product_price = document.createElement("h4");
+      product_price.textContent = product.price;
+      let product_name = document.createElement("h4");
+      product_name.textContent = product.name;
+
+      let product_decript = document.createElement("p");
+      product_decript.textContent = product.decript;
+
+      let addtocard_btn = document.createElement("button");
+      addtocard_btn.innerText = "Add to Cart" 
+
+      addtocard_btn.onclick = function() {
+          addtoCart(product)
+      };
+
+      div.append(img,product_name,product_decript,product_price,addtocard_btn);
+      parent.append(div);
+        })
+    }
+showProducts();
+
+if(localStorage.getItem("cart")===null){
+    localStorage.setItem("cart",JSON.stringify([]));
+}
+  function addtoCart(p) {
+      let products_cart = JSON.parse(localStorage.getItem("cart"));
+      products_cart.push(p);
+      localStorage.setItem("cart",JSON.stringify(products_cart));
+
+      console.log(products_cart)
+  }
+</script>
+</html>
