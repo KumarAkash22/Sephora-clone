@@ -133,6 +133,7 @@
             justify-content: center;
             text-align: center;
             /* background-color: blue; */
+            background-color: rgb(247, 243, 243);
         }
         #footer{
             margin-left: 10%;
@@ -519,8 +520,8 @@ else {
      div4.append(p_price)
      row_div.append(div1, div2,div3,div4)  
      count++
-     total = total + count
-     parent.append(row_div)
+     total+= +product.price
+        parent.append(row_div)
      let str_price = ""
      for(var i = 0; i < product.price.length; i++){
 
@@ -532,7 +533,7 @@ else {
       }
 
      } 
-     total_price = total_price + Number(str_price)
+     total_price = total_price + (str_price)
      
      console.log("total" + total_price)
      let final_price = document.getElementById("total_prie")
@@ -541,7 +542,7 @@ else {
       p_item.textContent = `${count} Course in cart`
  })
 }
-console.log(cart_data)
+console.log(total,cart_data)
 function promo(){
  var inp = document.getElementById("inp-coupon").value
  var pri = document.getElementById("total_prie")
