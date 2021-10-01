@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product to purchase</title>
+</head>
+<style>
+    #heading-1-div{
+        display: flex;
+    }
+    #search_box > input{
+            flex-grow: 1;
+            border: 1px solid white;
+            width: 10%;
+            height: 40px;
+            margin-right:18px;
+            /* border-radius: 30px; */
+            outline:none;
+        }
+        .search-btn {
+            width: 20px;
+            height: 16px;
+            color:palevioletred;
+            margin-right:50px ;
+            margin-top: 13px;
+        }
+        #search_box {
+            /* flex-grow: 2; */
+            margin-bottom: 1%;
+            display: flex;
+            width: 20%;
+            margin-top: 8px;
+            margin-left: 15%;
+            /* border: 1px solid black; */
+            border-radius: 40px;
+        }
+        .line{
+            width: 20%;
+            margin-top: -20px;
+            margin-left: 15%;
+        }
+        #sep{
+            /* justify-content: center; */
+            font-size:50px;
+            margin-left: 10%;
+            display: flex;
+            width: 24%; 
+            
+            /* border: 1px solid black;    */
+        }
+        #c-2-s{
+            margin-left: 180px;
+            margin-top: -3px;
+            /* border: 1px solid black; */
+        }
+        #cart {
+           background: white;
+           border: 0px solid black;
+           
+           padding: 2px;
+       }
+       #cart > img {
+           width: 30px;
+           height: 40px;
+           margin-top: 10x;
+
+        
+       }
+        
+        #sign_up {
+           background:white;
+           border: 0px solid white;
+           width: 90px;
+           height: 40px;
+           margin-top: -5px;
+           font-weight: bold;
+           font-size: 0.9rem;
+           text-decoration: none;
+           /* margin-left: 100px; */
+
+       }
+       #log_in {
+           background: white;
+           border: 0px solid white;
+           width: 90px;
+           height: 40px;
+           margin-top: -5px;
+           font-weight: bold;
+           font-size: 0.9rem;
+           
+       }
+       #heading-2-div{
+            display: flex;
+            gap: 3%;
+            justify-content: center;
+            margin-top: 1%;
+        }
+    #products{
+        margin: 5% 5% 5% 5%;
+        padding-top: 1%;
+        height: 1300;
+        display:  grid;
+        grid-template-columns:30% 30% 30% ;
+        grid-template-rows: 33% 33% 33% ;
+        grid-gap: 2%;
+        text-align: center;
+        /* border: 1px solid black; */
+    }
+    img{
+        width: 70%;
+    }
+    #abc{
+        text-align: center;
+    }
+    #footer-1{
+            justify-content: center;
+            text-align: center;
+            /* background-color: blue; */
+            background-color: rgb(247, 243, 243);
+        }
+        #footer{
+            margin-left: 10%;
+            width:80%;
+            /* background-color: red; */
+            /* border: 1px black solid; */
+        }
+        #footer-2{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        .last-1{
+            margin-top: 16px;
+            font-weight: bold;
+        }
+        .last-2{
+            font-size: 16px;
+            margin-top: 14px ;
+        }
+        #cart_button{
+            width: 100px;
+            height: 50px;
+            color: indigo;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+        #gotocart{
+            width: 100px;
+            height: 50px;
+            color: indigo;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+</style>
+<body><div id="heading-1-div">
+    <div id="search_box">
+        <a href="product1.html">
+        
+            <img class="search-btn"src="https://img.icons8.com/material-sharp/2x/search.png" />
+        </a>
+         <input  type="text" placeholder="Search SEPHORA"  />
+        </div>
+        <div id="sep">
+            <a href="product1.html" style="text-decoration: none;">
+            <div>S E P H O R A</div></a>
+        </div>    
+        <div id="c-2-s"><a href="cart.html"><button id="cart"><img src="https://cdn3.iconfinder.com/data/icons/shopping-cart-19/200/457-128.png"/></button></a>
+        <button id="log_in" ><a href="login_page.html" >Login</a></button>
+        <button id="sign_up"><a  href="signup_page.html">Signup </a></button></div> 
+
+</div>
+<div class="line"><hr>
+</div>
+    <div id="heading-2-div">
+        <h4>SALE</h4>
+        <h4>MAKEUP</h4>
+        <h4>SKINCARE</h4>
+        <h4>FRAGRANCE</h4>
+        <h4>HAIRCARE</h4>
+        <h4>TOOLS & BRUSHES</h4>
+        <h4>BRANDS</h4>
+    </div>
+    <hr>
+    
+    <a href="cart.html"><button id="gotocart">Go to Cart</button></a>
+    <div id="products"></div>
+    <br><br><br>
+    <div id="footer-1">
+        <div id="footer">
+            <h4>Sephora India’s Official Online Store – My Beauty Power</h4>
+            <p>Want to get your hands on gorgeous Sephora goodies that are just a click away? You’ve come to the right place! Sephora.nnnow.com is India’s official online portal to all things beauty.  
+                Choose from an enviable range of bestselling lipsticks, eye makeup, foundations, face masks, moisturizers, fragrances, haircare, tools and brushes and much more!</p>
+            <h4>A world of beauty awaits you</h4>
+            <p>Not only do we guarantee 100% authenticity and quality for all our beauty stash, but we’re the first to launch the most buzzed-about 
+                 international beauty brands online in India. Are you wondering when that particular lipstick, blender or eyeliner that’s causing a rage in the western world, is hitting the Indian market?  
+                 Apart from continually expanding to house a wider range of products every day, we are constantly striving to be the first to provide you the best online beauty shopping experience. 
+                 We are the go-to store to shop exclusive brands like Sephora Collection, Make Up For Ever, Benefit Cosmetics, Smashbox, Cover FX, Stila, and more. Club this with monthly unmissable 
+                deals, offers and slashed prices on cult-favorite products and brands and we have a very happy customer.</p>
+                <h4>One-stop Shop for all top beauty brands & categories</h4>
+                <p>Are you one to lust after Instagram beauty trends? Are you watching video after video on YouTube to nail that winged or smokey eye? 
+                    Not only do our brands offer you an unbeatable range of cosmetics and skincare, but they show you how to slay each trend through their how-to videos, featured weekly on the website. 
+                    And if that doesn’t float your boat, many of our brands boast of housing only good-for-you vegan ingredients or are taking a cruelty-free stance, 
+                    which is growing to be a major concern in the beauty world.</p>
+                    
+                    <p>Welcome to Sephora.nnnow.com - the future of online beauty shopping.</p>
+                </br>
+                    <div id="footer-2">
+                    <div>WHO WE ARE</div>
+                    <div>FREQUENTLY ASKED QUESTIONS</div>
+                    <div>CONTACT US</div>
+                </div>
+                <div class="last-1">BRANDS</div>
+                <div class="last-2">
+                    Sephora Collection | Benefit Cosmetics | Make Up For Ever | Cover FX | Stila | Natio | 
+                    Burt's Bees | Foreo | Smashbox | Glamglow | Clinique | Estee Lauder | Elizabeth Arden | 
+                    Givenchy | Bobbi Brown | Shiseido | OPI | Forest Essentials | Percy & Reed | Boscia | Oscar Blandi | 
+                    Burberry | CK Fragrances | Kenzo | Tom Ford | Bvlgari | Carolina Herrera 
+                    | Davidoff | Giorgio Armani | Montblanc | Paco Rabanne | Yves Saint Laurent | Azzaro | Nina Ricci | Roberto Cavalli | Zirh | Omorfee</div>
+                    <div class="last-1">MAKEUP</div>
+                    <div class="last-2">Face | Cheek | Eye | Lip | Nail | Makeup Palettes | Accessories</div>
+                    <div class="last-1">SKIN CARE</div>
+                    <div class="last-2">Moisturizers | Cleansers | Treatments | Masks | Eye Care | Sun Care | Lip Treatments</div>
+                    <div class="last-1">OTHER CATEGORIES</div>
+                    <div class="last-2">Fragrances | Tools & Brushes</div>
+                    <div class="last-1">MY SEPHORA</div>
+                    <div class="last-2">My orders | Store locator | Sephora Facebook | Sephora Instagram</div>
+        </div>
+    </div> 
+</body>
+<script>
+    let data = [
+        {
+        name : "MAC COSMETICS",
+        decript: "Studio Finish SPF 35 Concealer - NC25",
+        price: "2300",
+        img: "https://cdn08.nnnow.com/web-images/medium/styles/9UBKKU0GEA9/1620818183768/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript: "Powder Kiss Liquid Lip Stick - MACsmash",
+        price: "2500",
+        img: "https://cdn17.nnnow.com/web-images/medium/styles/URX4TLOYMBB/1620627876963/1.jpg"
+        },
+        {
+         name : "MAC COSMETICS",
+        price: "1500",
+        decript:"Studio Fix Fluid Foundation SPF 15 - NC 44",
+        img: "https://cdn17.nnnow.com/web-images/medium/styles/XC25V5T9Z5L/1620068090598/1.jpg"
+        },
+        
+        {
+        name : "MAC COSMETICS",
+        decript: "Hyper Real Glow Palette - Flash + Awe",
+        price: "7300",
+        img: "https://cdn14.nnnow.com/web-images/medium/styles/SHXO9YFZ179/1562835044618/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript:"Prep + Prime Lip",
+        price: "3400",
+        img: "https://cdn19.nnnow.com/web-images/medium/styles/YJSEF9Z3JPV/1620819235616/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript:"Brush Cleanser",
+        price: "2300",
+        img: "https://cdn12.nnnow.com/web-images/medium/styles/I6I43K10MB3/1562827958147/1.jpg"
+        },
+        
+        {
+        name : "MAC COSMETICS",
+        decript: "In Extreme Dimension Mascara - 3D Black Lash",
+        price: "3400",
+        img: "https://cdn18.nnnow.com/web-images/medium/styles/WEKE57SDSM6/1620819235565/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript: "Retro Matte Liquid Lip Colour - Dance With Me",
+        price: "2400",
+        img: "https://cdn10.nnnow.com/web-images/medium/styles/Z3AMFRONJ7U/1620062724479/1.jpg"
+        },
+        {
+        name : "MAC COSMETICS",
+        decript:"Studio Fix Powder Plus Foundation - NC46",
+        price: "2800",
+        img: "https://cdn06.nnnow.com/web-images/medium/styles/X7Y3Q5PJ3CO/1620068090538/1.jpg"
+        },
+        
+    ];
+
+    let parent = document.getElementById("products")
+    function showProducts() {
+      data.forEach(function (product) {
+      console.log(product.name);
+      let div =document.createElement("div");
+      let img = document.createElement("img");
+      img.src = product.img;
+      let product_price = document.createElement("h4");
+      product_price.textContent = product.price;
+      let product_name = document.createElement("h4");
+      product_name.textContent = product.name;
+      product_name.setAttribute("id","abc")
+
+      let product_decript = document.createElement("p");
+      product_decript.textContent = product.decript;
+
+      let addtocard_btn = document.createElement("button");
+      addtocard_btn.innerText = "Add to Cart"
+      addtocard_btn.setAttribute("id","cart_button")
+
+      addtocard_btn.onclick = function() {
+          addtoCart(product)
+      };
+
+      div.append(img,product_name,product_decript,product_price,addtocard_btn);
+      parent.append(div);
+        })
+    }
+showProducts();
+
+if(localStorage.getItem("cart")===null){
+    localStorage.setItem("cart",JSON.stringify([]));
+}
+  function addtoCart(p) {
+      let products_cart = JSON.parse(localStorage.getItem("cart"));
+      products_cart.push(p);
+      localStorage.setItem("cart",JSON.stringify(products_cart));
+
+      console.log(products_cart)
+  }
+</script>
+</html>
