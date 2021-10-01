@@ -414,7 +414,7 @@
         </div>
 </body>
 <script>
-    let cart_data = JSON.parse(localStorage.getItem("udemy_cart"))
+    let cart_data = JSON.parse(localStorage.getItem("cart"))
     var total = 0
         var count = 0
         var total_price = 0 ;
@@ -462,7 +462,7 @@ else {
      let image = document.createElement("img")
 
 
-     image.src = product.image
+     image.src = product.img
 
      let div2 = document.createElement("div")
      div2.setAttribute("class", "div2-style")
@@ -527,25 +527,27 @@ else {
          continue
       }  
       else {
-         str_price = str_price + product.price[i]
+         str_price = str_price + +product.price[i]
       }
 
      } 
      total_price = total_price + Number(str_price)
+     
      console.log("total" + total_price)
      let final_price = document.getElementById("total_prie")
-     final_price.textContent =   "₹"+total_price
+     final_price.textContent =   "₹"+ total_price
      var p_item = document.getElementById("coursenum")
       p_item.textContent = `${count} Course in cart`
  })
 }
+console.log(cart_data)
 function promo(){
  var inp = document.getElementById("inp-coupon").value
  var pri = document.getElementById("total_prie")
  var coupon_para = document.createElement("p")
  var  sucess = document.getElementById("applied")
  var not_sucess = document.getElementById("not_applied")
- if(inp == "SPECIAL26" || inp == "special26"){
+ if(inp == "masai30" || inp == "MASAI30"){
      pri.textContent =  "₹"+ total_price  * 0.74
      coupon_para.textContent =   inp + " promo code is applied" 
 
