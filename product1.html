@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewellery</title>
+    <title>Product to purchase</title>
 </head>
 <style>
     #heading-1-div{
@@ -106,7 +106,7 @@
         grid-template-rows: 33% 33% 33% ;
         grid-gap: 2%;
         text-align: center;
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
     img{
         width: 70%;
@@ -140,18 +140,34 @@
             font-size: 16px;
             margin-top: 14px ;
         }
+        #cart_button{
+            width: 100px;
+            height: 50px;
+            color: indigo;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+        #gotocart{
+            width: 100px;
+            height: 50px;
+            color: indigo;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
 </style>
 <body><div id="heading-1-div">
     <div id="search_box">
-        <a href="#" >
+        <a href="product1.html">
+        
             <img class="search-btn"src="https://img.icons8.com/material-sharp/2x/search.png" />
         </a>
          <input  type="text" placeholder="Search SEPHORA"  />
         </div>
         <div id="sep">
-            <div>S E P H O R A</div>
+            <a href="product1.html" style="text-decoration: none;">
+            <div>S E P H O R A</div></a>
         </div>    
-        <div id="c-2-s"><a href="#"><button id="cart"><img src="https://cdn3.iconfinder.com/data/icons/shopping-cart-19/200/457-128.png"/></button></a>
+        <div id="c-2-s"><a href="cart.html"><button id="cart"><img src="https://cdn3.iconfinder.com/data/icons/shopping-cart-19/200/457-128.png"/></button></a>
         <button id="log_in" ><a href="login_page.html" >Login</a></button>
         <button id="sign_up"><a  href="signup_page.html">Signup </a></button></div> 
 
@@ -169,7 +185,7 @@
     </div>
     <hr>
     
-    <a href="cart.html"><button>Go to Cart</button></a>
+    <a href="cart.html"><button id="gotocart">Go to Cart</button></a>
     <div id="products"></div>
     <br><br><br>
     <div id="footer-1">
@@ -293,7 +309,7 @@
 
       let addtocard_btn = document.createElement("button");
       addtocard_btn.innerText = "Add to Cart"
-       
+      addtocard_btn.setAttribute("id","cart_button")
 
       addtocard_btn.onclick = function() {
           addtoCart(product)
