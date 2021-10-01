@@ -193,7 +193,7 @@
         <div id="top">
    
             <div id="sign_up_page">
-                <h2>Log In to Your Udemy Account!</h2>
+                <h2>Log In to Your SEPHORA shopping!</h2>
                 <div class = "paragraph"></div>
                 
                 <input id = "email" class="name" type="email" placeholder="Email">
@@ -203,7 +203,7 @@
                 <div class="already">
                     <h3>or  </h3>
                     <div>  </div>
-                    <h3>   Forgot Password</h3> 
+                    <h3>Forgot Password</h3> 
                    </div> 
                 <div></div>
                 <div class="already">
@@ -259,4 +259,53 @@
         </div>
     
 </body>
+<script>
+
+    var user_data = JSON.parse(localStorage.getItem("user_details"))
+
+    function checkuser(e){
+        e.preventDefault()
+
+        var user_email = document.getElementById("email").value
+
+        var user_password = document.getElementById("pass").value
+
+        user_data.forEach(function(product){
+
+               var user_e = product.email
+               var user_p = product.password
+
+
+           if(user_e == user_email && user_p == user_password){
+               window.location.href = "slide.html"
+           }
+
+
+           else{
+               alert("There was a problem logging in. Check your email and password or create an account.")
+
+           }
+
+        })
+    }
+               
+var sign_btn = document.getElementById("sign-btn")
+
+function changeBackground(){
+   sign_btn.style.background = "#7B1FA2"
+}
+sign_btn.addEventListener("mouseover",changeBackground)
+
+function changeBackground1(){
+   sign_btn.style.background = "purple"
+}
+sign_btn.addEventListener("mouseout",changeBackground1)
+   
+
+
+
+
+
+
+</script>
 </html>
